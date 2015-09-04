@@ -1,6 +1,6 @@
-class CreateSession < ActiveRecord::Migration
+class CreatePost < ActiveRecord::Migration
   def change
-    create_table :sessions do |t|
+    create_table :posts do |t|
       t.references :ramen
       t.references :user
       t.integer :rating
