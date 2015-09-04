@@ -4,6 +4,8 @@ class CreateRestaurants < ActiveRecord::Migration
       t.string :name, null: false
       t.string :address
       t.integer :rating
+
+      t.timestamps
     end
   end
 end
