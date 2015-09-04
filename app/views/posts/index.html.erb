@@ -1,3 +1,9 @@
 <% @posts.each do |post| %>
-  <%= post.ramen_id %>
+  Poster: <%= post.user.name %><br>
+  Post Description: <%= post.description %><br>
+  Post Rating: <%= post.rating %><br>
+  Ramen Name: <%= post.ramen.name %><br>
+  Ramen description: <%= post.ramen.description %><br>
+  Price: <%= post.ramen.price %><br>
+  <br>
 <% end %>
