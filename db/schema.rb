@@ -16,6 +16,15 @@ ActiveRecord::Schema.define(version: 20150904002114) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "posts", force: :cascade do |t|
+    t.integer  "ramen_id"
+    t.integer  "user_id"
+    t.integer  "rating"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "ramens", force: :cascade do |t|
     t.string   "name",                                  null: false
     t.text     "description",                           null: false
@@ -29,15 +38,6 @@ ActiveRecord::Schema.define(version: 20150904002114) do
     t.string   "name",       null: false
     t.string   "address"
     t.integer  "rating"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "sessions", force: :cascade do |t|
-    t.integer  "ramen_id"
-    t.integer  "user_id"
-    t.integer  "rating"
-    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
