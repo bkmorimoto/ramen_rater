@@ -1,0 +1,9 @@
+<%= form_for post do |f| %>
+  <%= f.label 'ramen_id' %>
+  <%= f.text_field :ramen_id %><br>
+  <%= f.label 'rating' %>
+  <%= f.text_field :rating %><br>
+  <%= f.label :description %>
+  <%= f.text_area :description %><br>
+  <%= f.submit 'Post' %><br>
+<% end %>
