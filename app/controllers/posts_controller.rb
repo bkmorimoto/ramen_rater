@@ -10,7 +10,11 @@ class PostsController < ApplicationController
     post.user = User.find(1)
     post.save
 
-    redirect_to root_path
+    if request.xhr?
+      render partial: 'post', locals: {post: post}, layout: false
+    else
+      redirect_to root_path
+    end
   end
 
   private
