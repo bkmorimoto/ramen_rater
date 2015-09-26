@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   root 'posts#index'
 
   resources :posts
+  resource :sessions, only: [:new, :create, :destroy]
+  resources :users
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
