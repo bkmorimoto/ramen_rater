@@ -12,4 +12,6 @@
  *
  *= require_tree .
  *= require_self
+ *= require star-rating.min
+ *= require bootstrap-select.min
  */

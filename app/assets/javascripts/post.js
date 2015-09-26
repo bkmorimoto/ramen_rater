@@ -11,7 +11,8 @@ $(document).ready(function() {
       data: $form.serialize()
     }).then(function(response) {
       $('.post-container').append(response);
-      $form.find('input[type=text], textarea').val('')
+      $form.find('input[type=text], textarea').val('');
+      $('.rating-radio').prop('checked', false)
     })
 
   })
