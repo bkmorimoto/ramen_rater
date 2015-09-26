@@ -1,9 +1,26 @@
-<%= form_for post do |f| %>
-  <%= f.label 'ramen_id' %>
-  <%= f.text_field :ramen_id %><br>
-  <%= f.label 'rating' %>
-  <%= f.text_field :rating %><br>
-  <%= f.label :description %>
-  <%= f.text_area :description %><br>
-  <%= f.submit 'Post' %><br>
+<h3>Add a post</h3>
+<%= form_for post, html: {class: 'horizontal-form'} do |f| %>
+  <div class='form-group row'>
+    <%= f.label 'ramen_id', class: 'col-lg-2 control-label' %>
+    <div class='col-lg-10'>
+      <%= f.text_field :ramen_id, class: 'form-control' %>
+    </div>
+  </div>
+  <div class='form-group row'>
+    <%= f.label 'rating', class: 'col-lg-2 control-label' %>
+    <div class='col-lg-10'>
+      <%= f.text_field :rating, class: 'form-control' %>
+    </div>
+  </div>
+  <div class='form-group row'>
+    <%= f.label :description, class: 'col-lg-2 control-label' %>
+    <div class='col-lg-10'>
+      <%= f.text_area :description, class: 'form-control' %>
+    </div>
+  </div>
+  <div class='form-group row'>
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit 'Post' %>
+    </div>
+  </div>
 <% end %>

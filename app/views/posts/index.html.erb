@@ -1,11 +1,14 @@
-<% @posts.each do |post| %>
-  Poster: <%= post.user.name %><br>
-  Post Description: <%= post.description %><br>
-  Post Rating: <%= post.rating %><br>
-  Ramen Name: <%= post.ramen.name %><br>
-  Ramen description: <%= post.ramen.description %><br>
-  Price: <%= post.ramen.price %><br>
-  <br>
-<% end %>
-<br>
-<%= render partial: 'form', locals: {post: @post} %>
+<div class='post-container'>
+  <% @posts.each do |post| %>
+    Poster: <%= post.user.name %><br>
+    Post Description: <%= post.description %><br>
+    Post Rating: <%= post.rating %><br>
+    Ramen Name: <%= post.ramen.name %><br>
+    Ramen description: <%= post.ramen.description %><br>
+    Price: <%= post.ramen.price %><br>
+    <br>
+  <% end %>
+</div>
+<div class='new-post-form jumbotron'>
+  <%= render partial: 'form', locals: {post: @post} %>
+</div>
