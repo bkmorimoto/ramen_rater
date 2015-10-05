@@ -1,0 +1,43 @@
+<h3>Add a restaurant</h3>
+<%= form_for restaurant, html: {class: 'horizontal-form'} do |f| %>
+  <div class='form-group row'>
+    <%= f.label :name, class: 'col-lg-2 control-label' %>
+    <div class='col-lg-10'>
+      <%= f.text_field :name, class: 'form-control' %>
+    </div>
+  </div>
+  <div class='form-group row'>
+    <%= f.label :address, class: 'col-lg-2 control-label' %>
+    <div class='col-lg-10'>
+      <%= f.text_field :address, class: 'form-control' %>
+    </div>
+  </div>
+  <div class='form-group row'>
+    <%= f.label 'rating', class: 'col-lg-2 control-label' %>
+    <div class='col-lg-10'>
+      <label class="radio-inline">
+        <input type="radio" class='rating-radio' name='restaurant[rating]' id="inlineRadio1" value="1"> 1
+      </label>
+      <label class="radio-inline">
+        <input type="radio" class='rating-radio' name='restaurant[rating]' id="inlineRadio2" value="2"> 2
+      </label>
+      <label class="radio-inline">
+        <input type="radio" class='rating-radio' name='restaurant[rating]' id="inlineRadio3" value="3"> 3
+      </label>
+      <label class="radio-inline">
+        <input type="radio" class='rating-radio' name='restaurant[rating]' id="inlineRadio4" value="4"> 4
+      </label>
+      <label class="radio-inline">
+        <input type="radio" class='rating-radio' name='restaurant[rating]' id="inlineRadio5" value="5"> 5
+      </label>
+      <label class="radio-inline">
+        <input type="radio" class='rating-radio' name='restaurant[rating]' id="inlineRadio6" value="6"> 6
+      </label>
+    </div>
+  </div>
+  <div class='form-group row'>
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit 'Add' %>
+    </div>
+  </div>
+<% end %>

@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   root 'posts#index'
 
   resources :posts
+  resources :ramens
+  resources :restaurants
   resource :sessions, only: [:new, :create, :destroy]
   resources :users
 
