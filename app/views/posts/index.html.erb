@@ -1,14 +1,6 @@
 <div class='post-container'>
-  <% @posts.each do |post| %>
-    Poster: <%= post.user.name %><br>
-    Post Description: <%= post.description %><br>
-    Post Rating: <%= post.rating %><br>
-    Ramen Name: <%= post.ramen.name %><br>
-    Ramen description: <%= post.ramen.description %><br>
-    Price: <%= post.ramen.price %><br>
-    <br>
-  <% end %>
+  <%= render @posts %>
 </div>
 <div class='new-post-form jumbotron'>
-  <%= render partial: 'form', locals: {post: @post} %>
+  <%= render partial: 'form', locals: {post: @post, ramens: @ramens} %>
 </div>

@@ -2,6 +2,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
+    @ramens = Ramen.all
     @post = Post.new
   end
 
