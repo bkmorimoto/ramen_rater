@@ -1,0 +1,6 @@
+<div class='restaurant-container'>
+  <%= render @restaurants %>
+</div>
+<div class='new-restaurant-form jumbotron'>
+  <%= render partial: 'form', locals: {restaurant: @restaurant} %>
+</div>
